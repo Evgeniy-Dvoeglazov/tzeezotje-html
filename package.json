@@ -1,0 +1,22 @@
+{
+  "name": "tzeezotje-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgeniy-Dvoeglazov/tzeezotje-html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgeniy-Dvoeglazov/tzeezotje-html/issues"
+  },
+  "homepage": "https://github.com/Evgeniy-Dvoeglazov/tzeezotje-html#readme",
+  "dependencies": {
+    "swiper": "^10.1.0"
+  }
+}

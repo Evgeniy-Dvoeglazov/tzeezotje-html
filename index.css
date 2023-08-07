@@ -1,0 +1,12 @@
+@import url(./src/vendor/normalize.css);
+@import url(./src/vendor/fonts/poppins.css);
+
+@import url(./src/blocks/container/container.css);
+/* ------- body --------*/
+
+@import url(./src/blocks/body/body.css);
+@import url(./src/blocks/page/page.css);
+@import url(./src/blocks/header/header.css);
+@import url(./src/blocks/intro/intro.css);
+@import url(./src/blocks/menu/menu.css);
+@import url(./src/blocks/reviews/reviews.css);
