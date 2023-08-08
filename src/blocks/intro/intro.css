@@ -1,6 +1,7 @@
 .intro {
   color: #fff;
   margin-bottom: 265px;
+  padding: 0 20px;
 }
 
 .intro__description {
@@ -86,7 +87,48 @@
   background-position: center;
   background-size: cover;
   position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+.intro__overlay {
+  width: 100%;
+  height: 901px;
+  background-color: #000;
+  opacity: .51;
+  position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 1279px) {
+
+  .intro__bg {
+    height: 701px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .intro__overlay {
+    opacity: 0;
+  }
+
+
+  .intro {
+    color: #000;
+  }
+
+  .intro__link {
+    color: #000;
+  }
+
+  .intro__nav-item {
+    border: 1px solid #000;
+  }
+
+  .intro__actions {
+    margin-bottom: 40px;
+  }
 }

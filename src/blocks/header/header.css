@@ -1,5 +1,5 @@
 .header {
-  padding: 55px 0 154px;
+  padding: 55px 20px 154px;
   color: #fff;
 }
 
@@ -7,6 +7,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__logo_color {
+  display: none;
 }
 
 .header__nav-items {
@@ -56,4 +60,27 @@
 
 .header__phone-number:hover {
   opacity: .5;
+}
+
+@media screen and (max-width: 1279px) {
+
+  .header {
+    padding-bottom: 60px;
+  }
+
+  .header__link {
+    color: #000;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__logo_color {
+    display: block;
+  }
+
+  .header__phone-number {
+    color: #000;
+  }
 }
