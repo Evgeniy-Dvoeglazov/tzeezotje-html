@@ -17,27 +17,65 @@ const swiper = new Swiper('.swiper', {
 // Обработка отправки формы
 $('.popup__form').submit(function (evt) {
   evt.preventDefault();
+  if (validation(this) == true) {
 
-  $.ajax({
-    type: $(this).attr('method'),
-    url: $(this).attr('action'),
-    contentType: false,
-    cache: false,
-    processData: false,
-    data: new FormData(this),
-    success: function (result) {
-      // Вывод текста результата отправки
-      alert(result);
-      closePopup();
-    },
-    // Вывод статуса ошибки
-    error: function (error) {
-      console.log(error.status);
-      closePopup();
-    }
-  });
+    $.ajax({
+      type: $(this).attr('method'),
+      url: $(this).attr('action'),
+      contentType: false,
+      cache: false,
+      processData: false,
+      data: new FormData(this),
+      success: function (result) {
+        // Вывод текста результата отправки
+        alert(result);
+        closePopup();
+      },
+      // Вывод статуса ошибки
+      error: function (error) {
+        console.log(error.status);
+        closePopup();
+      }
+    });
+  }
   return false;
 });
+
+// Простенькая валидация формы
+function validation(form) {
+
+  let result = true;
+  const allInputs = form.querySelectorAll('.popup__input');
+
+  allInputs.forEach(input => {
+
+    removeError(input);
+
+    if (input.value == '') {
+      createError(input, `Please enter ${input.name}`);
+      result = false;
+    }
+  });
+
+  function removeError(input) {
+    const parent = input.parentNode;
+    if (parent.classList.contains('popup__error')) {
+      parent.querySelector('.popup__error-message').remove();
+      parent.classList.remove('popup__error');
+    }
+  }
+
+  function createError(input, text) {
+    const parent = input.parentNode;
+    const errorMessage = document.createElement('label');
+    errorMessage.classList.add('popup__error-message');
+    errorMessage.textContent = text;
+    parent.classList.add('popup__error');
+    parent.append(errorMessage);
+  }
+
+  return result;
+}
 
 // Обработчик открытия и закрытия меню
 function changeMenuVisibility() {

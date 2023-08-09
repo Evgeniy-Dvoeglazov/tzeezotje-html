@@ -107,6 +107,10 @@
   background-color: #2e3964;
 }
 
+.popup__submit-btn_disabled {
+  opacity: .3;
+}
+
 .popup__close-btn {
   background-image: url('/src/images/btn-close.svg');
   width: 100%;
@@ -128,6 +132,15 @@
 
 .popup__close-btn:hover {
   opacity: .6;
+}
+
+.popup__error .popup__input {
+  border-color: #ac3030;
+}
+
+.popup__error-message {
+  color: #ac3030;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 840px) {
