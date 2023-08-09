@@ -1,5 +1,15 @@
+@keyframes openMenu {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
 .header {
-  padding: 55px 20px 154px;
+  padding: 55px 40px 154px;
   color: #fff;
 }
 
@@ -62,10 +72,24 @@
   opacity: .5;
 }
 
-@media screen and (max-width: 1279px) {
+.navigation__checkbox {
+  display: none;
+}
+
+.navigation__hamburger {
+  display: none;
+}
+
+/* //////////// */
+
+
+
+/* //////////// */
+
+@media screen and (max-width: 1399px) {
 
   .header {
-    padding-bottom: 60px;
+    padding: 55px 20px 60px;
   }
 
   .header__link {
@@ -82,5 +106,181 @@
 
   .header__phone-number {
     color: #000;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+
+  .header__nav-item {
+    margin-right: 20px;
+  }
+
+  .header__logo_color {
+    width: 200px;
+  }
+
+  .header__link {
+    font-size: 14px;
+  }
+
+  .header__phone-number {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .header {
+    padding: 18px 20px 40px;
+  }
+
+  .navigation__hamburger {
+    display: flex;
+  }
+
+  .navigation__hamburger-lines {
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s linear;
+    z-index: 100;
+  }
+
+  .navigation__checkbox {
+    position: absolute;
+    display: block;
+    height: 44px;
+    width: 44px;
+    top: 15px;
+    right: 12px;
+    z-index: 101;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navigation__checkbox:hover~.navigation__hamburger-lines {
+    opacity: .5;
+  }
+
+  .navigation__line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #000;
+  }
+
+  .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line2 {
+    transition: transform 0.2s ease-in-out;
+    margin: 7px 0;
+  }
+
+  .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navigation__checkbox:checked~.navigation__hamburger-lines .line1 {
+    transform: rotate(45deg) translateY(1px);
+  }
+
+  .navigation__checkbox:checked~.navigation__hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navigation__checkbox:checked~.navigation__hamburger-lines .line3 {
+    transform: rotate(-45deg) translateY(-1px);
+  }
+
+  .header__nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    opacity: 1;
+    animation: openMenu .5s forwards;
+    justify-content: space-between;
+  }
+
+  .header__nav-menu_opened {
+    display: flex;
+  }
+
+  .header__overlay {
+    display: none;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  .header__overlay_opened {
+    display: flex;
+  }
+
+  .header__nav-items-menu_opened {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 28px;
+    font-size: 18px;
+    margin: 159px auto 40px;
+  }
+
+  .header__nav-item {
+    margin-right: 0;
+  }
+
+  .header__phone {
+    display: none;
+  }
+
+  .header__phone-menu {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    right: 90.75px;
+    top: 400px;
+  }
+
+  .header__phone-menu_opened {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 567px) {
+
+  .header__logo_color {
+    width: 150px;
+  }
+
+  .navigation__hamburger-lines {
+    height: 37px;
+    width: 37px;
+  }
+
+  .navigation__checkbox {
+    height: 37px;
+    width: 37px;
   }
 }

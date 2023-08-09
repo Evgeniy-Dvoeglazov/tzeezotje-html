@@ -17,8 +17,9 @@
       <div class="container header__container">
         <img class="header__logo" src="./src/images/logo.svg" alt="logo">
         <img class="header__logo_color" src="./src/images/logo-color.svg" alt="logo">
-        <nav class="header__nav">
-          <ul class="header__nav-items">
+        <div class="header__overlay"></div>
+        <nav class="header__nav header__nav-menu">
+          <ul class="header__nav-items header__nav-items-menu_opened">
             <li class="header__nav-item">
               <a class="header__link" href="#" target="_blank">À la carte</a>
             </li>
@@ -33,9 +34,17 @@
             </li>
           </ul>
         </nav>
-        <div class="header__phone">
+        <div class="header__phone header__phone-menu">
           <img class="header__phone-icon" src="./src/images/phone-icon.svg" alt="phone">
           <a class="header__phone-number" href="#" target="_blank">+32 9 282 57 25</a>
+        </div>
+      </div>
+      <div class="navigation__hamburger">
+        <input class="navigation__checkbox" type="checkbox" name="checkbox" />
+        <div class="navigation__hamburger-lines">
+          <span class="navigation__line line1"></span>
+          <span class="navigation__line line2"></span>
+          <span class="navigation__line line3"></span>
         </div>
       </div>
     </header>
@@ -175,22 +184,16 @@
             </p>
             <p class="reviews__author">Alain Heyndrickx</p>
           </div>
-          ...
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <!-- <img src="./src/images/arrow.svg" class="swiper-button-prev" alt="arrow-left" xmlns="http://www.w3.org/2000/svg"> -->
         <svg class="swiper-button-prev" width="70" height="70" viewBox="0 0 70 70" fill="none"
           xmlns="http://www.w3.org/2000/svg">
-          <path class="icon"
+          <path class="swiper-arrow"
             d="M43.8958 11.9L24.8791 30.9166C22.6333 33.1625 22.6333 36.8375 24.8791 39.0833L43.8958 58.1"
             stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <svg class="swiper-button-next" width="70" height="70" viewBox="0 0 70 70" fill="none"
           xmlns="http://www.w3.org/2000/svg">
-          <path class="icon"
+          <path class="swiper-arrow"
             d="M43.8958 11.9L24.8791 30.9166C22.6333 33.1625 22.6333 36.8375 24.8791 39.0833L43.8958 58.1"
             stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -221,7 +224,6 @@
       </section>
     </main>
   </div>
-  <script src="./src/scripts/jquery.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./src/scripts/index.js"></script>

@@ -1,5 +1,5 @@
 .menu {
-  padding: 80px 20px 90px;
+  padding: 80px 40px 90px;
 }
 
 .menu__container {
@@ -78,4 +78,101 @@
   top: 51px;
   left: 97px;
   z-index: -1;
+}
+
+@media screen and (max-width: 1279px) {
+
+  .menu {
+    padding: 50px 20px;
+  }
+
+  .menu__container {
+    flex-direction: column;
+  }
+
+  .menu__items {
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+
+  .menu__description {
+    justify-content: space-between;
+  }
+
+  .menu__interior-photos {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .menu__title {
+    font-size: 18px;
+  }
+
+  .menu__description-text {
+    font-size: 14px;
+  }
+
+  .menu__item {
+    padding-bottom: 10px;
+  }
+
+  .menu__interior-photo {
+    max-width: 250px;
+  }
+
+  .menu__interior-photo_left {
+    margin-top: 100px;
+  }
+
+  .menu__interior-photo_right {
+    margin-bottom: 100px;
+  }
+
+  .menu__frame {
+    width: 350px;
+    height: 400px;
+    top: 38px;
+    left: 82px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+
+  .menu {
+    padding: 30px 20px;
+  }
+
+  .menu__title {
+    font-size: 16px;
+  }
+
+  .menu__description-text {
+    line-height: 1.33;
+  }
+
+  .menu__items {
+    margin-bottom: 30px;
+  }
+
+  .menu__interior-photo {
+    max-width: 132px;
+  }
+
+  .menu__interior-photo_left {
+    margin-top: 70px;
+  }
+
+  .menu__interior-photo_right {
+    margin-bottom: 70px;
+    margin-left: 16px;
+  }
+
+  .menu__frame {
+    width: 180px;
+    height: 200px;
+    top: 33px;
+    left: 47px;
+  }
 }

@@ -1,0 +1,56 @@
+.swiper {
+  height: 100%;
+}
+
+.swiper-button-prev {
+  width: 70px;
+  height: 70px;
+  left: 19.53%;
+}
+
+.swiper-button-next {
+  width: 70px;
+  height: 70px;
+  right: 19.53%;
+  transform: rotateY(180deg);
+}
+
+.swiper-arrow {
+  transition: stroke .2s linear;
+}
+
+.swiper-button-prev:hover .swiper-arrow {
+  stroke: #d3b47f;
+}
+
+.swiper-button-next:hover .swiper-arrow {
+  stroke: #d3b47f;
+}
+
+@media screen and (max-width: 1599px) {
+
+  .swiper-button-prev {
+    left: 19px;
+  }
+
+  .swiper-button-next {
+    right: 19px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
