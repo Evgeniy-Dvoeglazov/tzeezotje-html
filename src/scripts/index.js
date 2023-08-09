@@ -1,4 +1,25 @@
-const burgerBtn = document.querySelector('.navigation__checkbox');
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+if (ScrollTrigger.isTouch !== 1) {
+  ScrollSmoother.create({
+    wrapper: '.wrapper',
+    content: '.content',
+    smooth: 1.5,
+    effects: true
+  })
+
+  gsap.fromTo('.intro', {opacity: 1}, {
+    opacity: 0,
+    scrollTrigger: {
+    trigger: '.intro',
+    start: '200',
+    end: '700',
+    scrub: true
+    }
+  })
+}
+
+const burgerBtn = document.querySelector('.hamburger__checkbox');
 const menu = document.querySelector('.header__nav-menu');
 const phone = document.querySelector('.header__phone');
 const headerOverlay = document.querySelector('.header__overlay');
