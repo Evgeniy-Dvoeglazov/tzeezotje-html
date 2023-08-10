@@ -5,14 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./src/images/favicon-32x32.png" type="image/png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./src/pages/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
   <script src="./libs/gsap/gsap.min.js" defer></script>
   <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
   <script src="./libs/gsap/ScrollSmoother.min.js" defer></script>
-  <script src="./src/scripts/index.js" defer></script>
+  <script src="./src/pages/index.js" defer></script>
   <title>Tzeezotje</title>
 </head>
 
@@ -21,6 +22,8 @@
   <div class="page">
     <div class="wrapper">
       <div class="content">
+
+        <!-- Header -->
 
         <header class="header">
           <div class="container header__container">
@@ -49,7 +52,7 @@
             </div>
           </div>
           <div class="hamburger">
-            <input class="hamburger__checkbox" type="checkbox" name="checkbox" />
+            <input class="hamburger__checkbox" type="checkbox" name="checkbox">
             <div class="hamburger-lines">
               <span class="hamburger__line line1"></span>
               <span class="hamburger__line line2"></span>
@@ -58,7 +61,11 @@
           </div>
         </header>
 
+        <!-- Main -->
+
         <main class="main">
+
+          <!-- Intro -->
 
           <section class="intro">
             <div class="container">
@@ -88,6 +95,8 @@
               <div class="intro__bg"></div>
             </div>
           </section>
+
+          <!-- Menu -->
 
           <section class="menu">
             <div class="menu__container container">
@@ -162,6 +171,9 @@
               </div>
             </div>
           </section>
+
+          <!-- Reviews -->
+
           <section class="reviews swiper">
             <!-- Additional required wrapper -->
             <div class="reviews__container swiper-wrapper">
@@ -170,10 +182,9 @@
                 <img class="reviews__quotes" src="./src/images/quotes.svg" alt="quotes">
                 <h2 class="reviews__title">Goede service, lekker eten, toffe ambiance</h2>
                 <p class="reviews__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                  eirmod tempor invidunt ut labore
-                  et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                  rebum.
-                  Stet clita kasd gubergren.
+                  eirmod tempor invidunt ut&nbsp;labore et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
+                  At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores et&nbsp;ea&nbsp;rebum. Stet clita kasd
+                  gubergren.
                 </p>
                 <p class="reviews__author">Alain Heyndrickx</p>
               </div>
@@ -181,10 +192,9 @@
                 <img class="reviews__quotes" src="./src/images/quotes.svg" alt="quotes">
                 <h2 class="reviews__title">Goede service, lekker eten, toffe ambiance</h2>
                 <p class="reviews__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                  eirmod tempor invidunt ut labore
-                  et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                  rebum.
-                  Stet clita kasd gubergren.
+                  eirmod tempor invidunt ut&nbsp;labore et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
+                  At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores et&nbsp;ea&nbsp;rebum. Stet clita kasd
+                  gubergren.
                 </p>
                 <p class="reviews__author">Alain Heyndrickx</p>
               </div>
@@ -192,10 +202,9 @@
                 <img class="reviews__quotes" src="./src/images/quotes.svg" alt="quotes">
                 <h2 class="reviews__title">Goede service, lekker eten, toffe ambiance</h2>
                 <p class="reviews__description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                  eirmod tempor invidunt ut labore
-                  et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                  rebum.
-                  Stet clita kasd gubergren.
+                  eirmod tempor invidunt ut&nbsp;labore et&nbsp;dolore magna aliquyam erat, sed diam voluptua.
+                  At&nbsp;vero eos et&nbsp;accusam et&nbsp;justo duo dolores et&nbsp;ea&nbsp;rebum. Stet clita kasd
+                  gubergren.
                 </p>
                 <p class="reviews__author">Alain Heyndrickx</p>
               </div>
@@ -214,13 +223,11 @@
             </svg>
           </section>
 
-
-
         </main>
 
       </div>
-
     </div>
+
     <!-- Popup -->
     <section class="popup">
       <div class="popup__container">
@@ -229,16 +236,16 @@
           <div class="popup__user-fields">
             <div class="popup__user-field">
               <label class="popup__label" for="name">Name</label>
-              <input class="popup__input" type="text" name="name" placeholder="Input your name">
+              <input class="popup__input" type="text" name="name" id="name" placeholder="Input your name">
             </div>
             <div class="popup__user-field">
               <label class="popup__label" for="email">Email</label>
-              <input class="popup__input" type="email" name="email" placeholder="Input your email">
+              <input class="popup__input" type="email" name="email" id="email" placeholder="Input your email">
             </div>
           </div>
           <div class="popup__request-field">
             <label class="popup__label" for="request">Speciale Request</label>
-            <textarea class="popup__textarea" type="text" name="request" placeholder="Input your special request"
+            <textarea class="popup__textarea" name="request" id="request" placeholder="Input your special request"
               rows="3"></textarea>
           </div>
           <button class="popup__submit-btn" type="submit">Send</button>
@@ -246,6 +253,7 @@
         <button class="popup__close-btn" aria-label="Close form button"></button>
       </div>
     </section>
+
   </div>
 
 </body>

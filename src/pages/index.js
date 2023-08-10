@@ -1,3 +1,12 @@
+const burgerBtn = document.querySelector('.hamburger__checkbox');
+const menu = document.querySelector('.header__nav-menu');
+const phone = document.querySelector('.header__phone');
+const headerOverlay = document.querySelector('.header__overlay');
+const reserveBtn = document.querySelector('.intro__button');
+const popup = document.querySelector('.popup');
+const closePopupBtn = document.querySelector('.popup__close-btn');
+
+// Поключение небольшой gsap анимации и плавного скрола
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 if (ScrollTrigger.isTouch !== 1) {
@@ -8,24 +17,27 @@ if (ScrollTrigger.isTouch !== 1) {
     effects: true
   })
 
-  gsap.fromTo('.intro', {opacity: 1}, {
+  gsap.fromTo('.intro', { opacity: 1 }, {
     opacity: 0,
     scrollTrigger: {
-    trigger: '.intro',
-    start: '200',
-    end: '700',
-    scrub: true
+      trigger: '.intro',
+      start: '200',
+      end: '700',
+      scrub: true
+    }
+  })
+
+  gsap.fromTo('.menu__interior-photos', { x: 200, opacity: 0 }, {
+    opacity: 1,
+    x: 0,
+    scrollTrigger: {
+      trigger: '.menu__items',
+      start: '-600',
+      end: '-200',
+      scrub: true
     }
   })
 }
-
-const burgerBtn = document.querySelector('.hamburger__checkbox');
-const menu = document.querySelector('.header__nav-menu');
-const phone = document.querySelector('.header__phone');
-const headerOverlay = document.querySelector('.header__overlay');
-const reserveBtn = document.querySelector('.intro__button');
-const popup = document.querySelector('.popup');
-const closePopupBtn = document.querySelector('.popup__close-btn');
 
 // Подключение свайпера
 const swiper = new Swiper('.swiper', {

@@ -65,7 +65,8 @@
   line-height: 2;
 }
 
-.popup__input, .popup__textarea {
+.popup__input,
+.popup__textarea {
   padding: 28px 16px;
   font-size: 16px;
   font-weight: 400;
@@ -173,7 +174,8 @@
     margin-bottom: 20px;
   }
 
-  .popup__input, .popup__textarea {
+  .popup__input,
+  .popup__textarea {
     padding: 10px;
     font-size: 14px;
     font-weight: 400;

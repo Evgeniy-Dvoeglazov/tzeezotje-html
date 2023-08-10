@@ -1,3 +1,13 @@
+@keyframes openMenu {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
 .header {
   padding: 55px 40px 154px;
   color: #fff;
